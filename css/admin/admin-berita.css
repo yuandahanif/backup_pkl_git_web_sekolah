@@ -1,0 +1,32 @@
+.gambar label {
+    margin-bottom: .5em;
+}
+/* .gambar input#gambar::-webkit-file-upload-button { */
+/* visibility: hidden; */
+/* opacity: 0; */
+/* } */
+#gambar {
+    display: block;
+    outline: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* table berita */
+table{
+    vertical-align: top;
+}
+tr td:nth-child(4) {
+    width: 40%;
+}
+
+.desc-berita {
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}

@@ -1,0 +1,93 @@
+.deskripsi label{
+    margin-bottom: .5em;
+}
+#tambah-siswa{
+    box-shadow: 2px 2px 10px #707070;
+    padding: 3em;
+    margin: 0em 3em;
+    display: flex;
+    flex-grow: 1;
+}
+#tambah-siswa > div{
+    flex-grow: 1;
+    min-width: 50%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+label{
+    display: block;
+}
+
+/* form */
+#tambah-siswa input[type="text"],
+#tambah-siswa input[type="password"],
+#tambah-siswa input[type="email"],
+#tambah-siswa input[type="number"]{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(167, 167, 167);
+    background-color: transparent;
+    width: 100%;
+    margin: .5em 0;
+    height: 1.2em;
+    line-height: 1.2em;
+    padding: 0 5px 5px;
+    font-size: 1em;
+}
+/* kelamin */
+.jenis-kelamin{
+    padding: 0 5px 5px;
+    margin: .5em 0;
+}.jenis-kelamin label{
+    margin: .3em 0;
+}
+/* agama */
+.agama, .jurusan{
+    padding: 0 5px 5px;
+    margin: .5em 0;
+}.agama label, .jurusan label{
+    margin: .35em 0;
+}.agama select , .jurusan select{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(167, 167, 167);
+    background-color: transparent;
+    height: 100%;
+    line-height: 1;
+    padding: 0 0px 5px;
+    font-size: 1em;
+}
+/* tempat tanggal */
+[type="date"] {
+    border: none;
+    border-bottom: 1px solid rgb(167, 167, 167);
+    margin: .9em 0;
+    height: 1.2em;
+    line-height: 1.2em;
+    padding: 0 5px 5px;
+    font-size: 1em;
+    background: transparent url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+  }
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+.tempat-tanggal div{
+    display: flex;
+}
+#tambah-siswa  .tempat-tanggal input{
+    width: 50%;
+}
+/* submit */
+button[type="submit"]{
+    padding: .6em;
+    background-color: lime;
+    outline: none;
+    border: none;
+    border-radius: .5em;
+    font-size: .9em;
+    margin-top: .5em;
+}

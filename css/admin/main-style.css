@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=KoHo');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Archivo');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+html, body {
+    overflow: hidden;
+    max-height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Roboto','Archivo','Lato','Open Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/* scroll */
+.bag-kanan::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.bag-kanan:-webkit-scrollbar
+{
+    width: 8px;
+    background-color: #F5F5F5;
+}
+.bag-kanan::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+.container-admin{
+    display: flex;
+}
+/* nav kiri */
+.container-admin .nav-kiri{
+    height: 100vh;
+    width: 15em;
+    min-width: 15em;
+    padding: 1em 0 0 0em;
+    box-sizing: border-box;
+    box-shadow: 2px 0px 6px #555555;
+}
+.nav-kiri .logo{
+    max-width: 150px;
+    min-width: 150px;
+    max-height: 150px;
+    min-height: 150px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto 1em;
+    background-image: url(../../images/smk-logo.png);
+    background-size: cover;
+    background-position: center;
+}
+.nav-kiri .nav-kanan-menu ul > li > a{
+    display: block;
+    padding: .6em 0 .6em 2em;
+}
+.nav-kiri .nav-kanan-menu ul > li > ul > li a{
+    display: block;
+    padding: .6em 0 .6em 3.5em;
+}
+/* hide and shake */
+.nav-kiri .nav-kanan-menu ul > li > ul{
+    display: none;
+    transform-origin: top;
+}
+
+/* kanan */
+.bag-kanan{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+/* main */
+.bag-kanan nav.atas{
+    display: flex;
+    padding: 1em 2em;
+    justify-content: flex-end;
+    vertical-align: middle;
+}
+nav.atas form{
+    flex-grow: 1;
+    margin-bottom: 2em;
+}
+#form-cari input{
+    outline: none;
+    border: none;
+    border: 1px solid gray;
+    width: 20em;
+    border-radius: 2em;
+    height: 1.2em;
+    line-height: 1.2em;
+    padding: 5px 10px;
+    font-size: 1em
+}
+#form-cari button{
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    transition: .3s;
+    cursor: pointer;
+}#form-cari button:hover{
+    background-color: black;
+    color: white;
+}
+/* isi */
+.bag-kanan-main{
+    height: 100%;
+    padding: 2em;
+}
+.bag-kanan-main table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.bag-kanan-main table th,.bag-kanan-main table td{
+    border: 3px solid gray;
+    padding: 8px;
+}
+.bag-kanan-main table th{
+    padding: 12px 0 12px;
+    background: rgb(155, 155, 155);
+    color: #fff;
+}
+.bag-kanan-main tr td:last-child,
+.bag-kanan-main tr td:nth-child(1),
+.bag-kanan-main tr td:nth-child(3){
+    text-align: center;
+}
+/* tombol */
+.hapus , .edit{
+    display: inline-block;
+    padding: 5px;
+    background-color: red;
+    border-radius: 6px;
+}.edit{
+    background-color: greenyellow;
+}
+/* hapus */
+#hapus{
+    display: block;
+    margin-left: auto;
+    margin-bottom: 1em;
+    padding: 7px;
+    background-color: red;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+}

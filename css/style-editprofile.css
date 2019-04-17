@@ -1,0 +1,129 @@
+.event-modal-profile{
+    position: fixed;
+    z-index: 200;
+    width: 550px;
+    height: fit-content;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 6px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.288);
+    box-sizing: border-box;
+    padding: 2.4em 1em 1em;
+    transform-origin: top;
+}
+.profile-edit-close{
+    display: none;
+}
+/* tombol close */
+#close-edit-profile{
+    display: block !important;
+    position: absolute;
+    right: .4em;
+    top: .4em;
+    font-size: 2em;
+    transition: .5s;
+    color: #707070;
+}#close-edit-profile:hover{
+    color: rgb(0, 0, 0);
+}
+form#edit-profile input[type="text"],
+form#edit-profile input[type="password"],
+form#edit-profile input[type="email"]{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(161, 161, 161);
+    background-color: transparent;
+    width: 100%;
+    margin: 1em 0;
+    height: 1.2em;
+    line-height: 1.2em;
+    padding: 0 5px 5px;
+    font-size: 1em
+}
+form#edit-profile .update button[name="update"]{
+    width: 100%;
+    border: none;
+    font-weight: bold;
+    background-color: aqua;
+    padding: 8px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px 0 0;
+}
+form#edit-profile input[type="text"]#quotes{
+    display: block;
+    width: 50%;
+    margin: 1em auto 0;
+    text-align: center;
+}
+/* foto */
+.img-profile-update{
+    width: 120px;
+    height: 120px;
+    min-height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+    box-sizing: border-box;
+}
+/* upload foto */
+.img-profile-update{
+    margin: auto;
+}
+.img-profile-update input#foto-baru::-webkit-file-upload-button {
+    visibility: hidden;
+    opacity: 0;
+}
+#foto-baru{
+    display: block;
+    outline: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }#foto-baru::before{
+      content: 'Ubah Foto';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      background-color: rgba(255, 255, 255, 0.767);
+      font-weight: 700;
+      white-space: nowrap;
+      padding: 4px 2px;
+      border-radius: 3px;
+      opacity: 0;
+      transition: .5s;
+  }#foto-baru:hover::before{
+      opacity: 1;
+  }
+  /* ubah lain lain*/
+  .triger-adv{
+      margin: auto;
+      text-align: center;
+      display: block !important;
+      margin: 1em 0 0 0;
+      transform: rotate(0deg);
+  }.arrow-rotate{
+      transform: rotate(180deg);
+  }
+  .adv-input{
+      display: none;
+      transform-origin: top;
+      /* transform: scaleY(0); */
+      /* transition: .5s; */
+  }
+  
+  /* TODO:res */
+  @media screen and (max-width:560px)
+  {
+    .event-modal-profile{
+        width: 100%;
+    }
+  }

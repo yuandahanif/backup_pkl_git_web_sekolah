@@ -1,0 +1,161 @@
+.sec-kiri .list-event{
+    display: flex;
+    margin: .4em 0;
+    height: 6em;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.288);
+}
+/* kiri */
+.list-event .list-kiri{
+    background-color: #707070;
+    color: white;
+    font-weight: 600;
+    max-width: 5em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}.list-kiri::before{
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free"; font-weight: 400;
+    content: '\f017';
+    margin: 0 0 .3em;
+}
+/* bag-kanan */
+.list-event .list-kanan{
+    padding: 0 .4em;
+    padding-left:.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #535353;
+}
+.list-kanan a.nama-acara{
+    font-size: 1.3em;
+    display: inline-block;
+    text-decoration: none;
+    color: #2e2828;
+}
+.list-kanan p.deskripsi-acara{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-indent: 1em;
+}
+/* kanan banget | lokasi */
+.kanan-banget{
+    height: 100%;
+    background-color: #707070;
+    color: white;
+    margin-left: auto;
+    font-weight: 600;
+    max-width: 5em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.kanan-banget p {
+    text-align: center;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.kanan-banget i{
+    margin-bottom: .3em;
+}
+/* responsive */
+@media screen and (max-width: 720px){
+    .sec-kiri .list-event{
+        display: flex;
+        flex-direction: column;
+        margin: .4em 0;
+        height: 10em;
+        box-sizing: border-box;
+    }
+    /* kiri */
+    .list-event .list-kiri{
+        padding: .4em 0;
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }.list-kiri::before{
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free"; font-weight: 400;
+        content: '\f017';
+        margin: 0 .3em 0em ;
+    }
+    .list-event .list-kiri .bulan{
+        margin-left: 5px;
+    }
+    /* bag-kanan */
+    .list-event .list-kanan{
+        padding: 0 .4em;
+        padding-left:.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #535353;
+    }
+    .list-kanan a.nama-acara{
+        font-size: 1.3em;
+        display: inline-block;
+        text-decoration: none;
+        color: #2e2828;
+    }
+    .list-kanan p.deskripsi-acara{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-indent: 1em;
+    }
+    /* kanan banget | lokasi */
+    .kanan-banget{
+        height: fit-content;
+        background-color: #707070;
+        color: white;
+        padding: .4em 0;
+        margin-top: auto;
+        font-weight: 600;
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .kanan-banget p {
+        text-align: center;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .kanan-banget i{
+        margin-right: .3em;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 500px){
+    .container-berita{
+        padding: 5em 1em;
+    }
+    .container-berita .sec-kiri{
+        padding: 0;
+    }
+}

@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+#profile{
+    margin: 5em 5em 0;
+    /* min-height: 100vh; */
+    padding: 2em 4em;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+#profile > div{
+    display: flex;
+    margin: 2em 0;
+    flex-basis: auto;
+    flex-grow: 1;
+}
+/* atas */
+#profile .atas {
+    color: #707070;
+    font-family: 'PT Sans', sans-serif;
+}
+#profile .atas .kiri{
+    width: fit-content;
+}
+#profile .atas .kiri img{
+    width: 200px;
+    height: 200px;
+}
+#profile .atas .kanan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#profile .atas .kanan .smk{
+    font-size: 4em;
+}
+#profile .atas .kanan .link-sekolah,
+#profile .atas .kanan .list-jurusan{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#profile .atas .kanan .link-sekolah a,
+#profile .atas .kanan .list-jurusan a{
+    text-decoration: none;
+    color: #707070;
+    margin: .5em 1em;
+}
+/* tengah */
+#profile .tengah > div{
+    color: #707070;
+    padding: 1.5em 1em;
+    text-align: justify;
+    text-align-last: center;
+    width: 50%;
+}
+#profile .tengah .kiri{
+    border-right: 2px solid #707070;
+}
+/* map */
+#container-map{
+    width: 100%;
+}
+#map{
+    width: 100%;
+    height: 60vh;
+}
+/* sosmed */
+#sosial-media{
+    min-height: 20vh;
+}
+#sosial-media > div > h1{
+    margin: 0 1em 0 0;
+}
+#sosial-media .kiri,
+#sosial-media .kanan{
+    color: #707070;
+    width: 50%;
+    max-width: 50%;
+    display: flex;
+}
+#sosial-media .kiri ul{
+    margin: 1em 0;
+    align-self: center;
+    justify-self: center;
+}
+#sosial-media .kiri ul li a{
+    text-decoration: none;
+    color: #707070;
+    display: block;
+    margin: .5em 0;
+    transition: .5s;
+    line-height: 1.2em;
+}#sosial-media .kiri ul li:nth-child(1) a:hover{
+    color: #3F729B;
+}#sosial-media .kiri ul li:nth-child(2) a:hover{
+    color: #D44638;
+}#sosial-media .kiri ul li:nth-child(3) a:hover{
+    color: #211F1F;
+}#sosial-media .kiri ul li:nth-child(4) a:hover{
+    color: #31ACE7;
+}
+#sosial-media .kiri ul li i{
+    font-size: 1.2em
+}
+#sosial-media .kanan .info{
+    margin: 1em 0;
+    align-self: center;
+    justify-self: center;
+}
+#sosial-media .kanan .info p{
+    text-align: justify;
+    margin: .5em 0;
+}
+/* responsive */
+@media screen and (max-width:1228px)
+{
+    #profile .atas .kanan .smk{
+        font-size: 3em;
+    }
+    #profile .atas .kanan .link-sekolah a,
+    #profile .atas .kanan .list-jurusan a{
+    text-decoration: none;
+    color: #707070;
+    margin: .5em 1em;
+    font-size: .8em;
+    }
+}
+@media screen and (max-width:1040px)
+{
+    #profile{
+        margin: 5em 5em 0;
+        padding: 2em 3em;
+    }
+    #profile .atas .kanan .smk{
+        font-size: 2em;
+    }
+    #profile .atas .kanan .link-sekolah a,
+    #profile .atas .kanan .list-jurusan a{
+    text-decoration: none;
+    color: #707070;
+    margin: .5em 1em;
+    font-size: .6em;
+    }
+}
+@media screen and (max-width:870px)
+{
+    #profile{
+        margin: 5em 5em 0;
+        /* min-height: 100vh; */
+        padding: 2em 2em;
+    }
+    #profile .atas .kanan .smk{
+        font-size: 2em;
+        text-align: center;
+    }
+    #profile .atas .kanan .link-sekolah a,
+    #profile .atas .kanan .list-jurusan a{
+    text-decoration: none;
+    color: #707070;
+    margin: .5em 1em;
+    text-align: center;
+    font-size: .6em;
+    }
+}
+@media screen and (max-width:820px)
+{
+    #sosial-media .kiri ul li a{
+        margin: .5em 0;
+        line-height: 1.2em;
+        font-size: .8em;
+    }
+    #sosial-media .kanan .info p{
+        text-align: left;
+        font-size: .8em;
+        margin: .5em 0;
+    }
+}
+@media screen and (max-width:695px)
+{
+    #profile{
+        margin: 5em 5em 0;
+        padding: 2em 1em;
+    }
+    #profile .atas .kiri img{
+        width: 150px;
+        height: 150px;
+    }
+    #profile .tengah > div{
+        padding: 1.5em .5em;
+        text-align: justify;
+        text-align-last: center;
+        width: 50%;
+    }
+    #sosial-media{
+        flex-direction: column;
+        align-items: center;
+    }
+    #sosial-media > div{
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    #sosial-media .kiri ul li a{
+        margin: .5em 0;
+        line-height: 1.2em;
+        font-size: .8em;
+    }
+    #sosial-media .kanan .info p{
+        text-align: left;
+        font-size: .8em;
+        margin: .5em 0;
+    }
+}
+@media screen and (max-width:605px)
+{
+    #profile{
+        margin: 5em 5em 0;
+        padding: 2em 1em;
+    }
+    #profile .atas .kiri img{
+        width: 150px;
+        height: 150px;
+    }
+    #profile .tengah > div{
+        padding: 1.5em .5em;
+        text-align: justify;
+        text-align-last: center;
+        width: 50%;
+    }
+    #profile .atas .kanan .link-sekolah,
+    #profile .atas .kanan .list-jurusan{
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        color: #707070;
+        margin: .2em 1em;
+    }
+    #profile .atas .kanan .link-sekolah a,
+    #profile .atas .kanan .list-jurusan a{
+    text-decoration: none;
+    color: #707070;
+    margin: .1em 1em;
+    text-align: center;
+    font-size: .6em;
+    }
+}
+@media screen and (max-width:550px)
+{
+    #profile{
+        margin: 5em 5em 0;
+        padding: 2em 1em;
+    }
+    #profile > div{
+        display: flex;
+        margin: 2em 0;
+        flex-basis: auto;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+    }
+    #profile .atas .kiri{
+        width: 100%;
+        text-align: center;
+    }
+    #profile .atas .kiri img{
+        width: 150px;
+        height: 150px;
+    }
+    #profile .atas .kanan .link-sekolah,
+    #profile .atas .kanan .list-jurusan{
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        color: #707070;
+        margin: .2em 1em;
+    }
+    #profile .atas .kanan .link-sekolah a,
+    #profile .atas .kanan .list-jurusan a{
+    text-decoration: none;
+    color: #707070;
+    margin: .1em 1em;
+    text-align: center;
+    font-size: .6em;
+    }
+    #profile .tengah > div{
+        padding: 1.5em 0;
+        text-align: justify;
+        text-align-last: center;
+        width: 100%;
+    }
+    #profile .tengah .kiri{
+        border-right: none;
+    }
+}
+@media screen and (max-width:480px)
+{
+    #profile{
+        margin: 0;
+        padding: 5em 1em 0;
+    }
+    #profile .atas .kanan .link-sekolah a,
+    #profile .atas .kanan .list-jurusan a{
+    text-decoration: none;
+    color: #707070;
+    margin: .1em 1em;
+    text-align: center;
+    font-size: 1em;
+    }
+}

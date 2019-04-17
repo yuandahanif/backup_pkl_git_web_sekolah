@@ -1,0 +1,120 @@
+#event-popup{
+    transition: .5s;
+    box-shadow: 0 0 0 100000px rgba(0, 0, 0, 0.336);
+}
+/* .event-popup::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+} */
+.event-popup{
+    position: fixed;
+    z-index: 200;
+    width: 550px;
+    height: fit-content;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 6px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.288);
+    box-sizing: border-box;
+    padding: 2.4em 1em 1em;
+}
+/* event popup close */
+.event-popup-close{
+    display: none;
+    background-color: white;
+}
+/* tombol-close */
+#close-event{
+    display: block !important;
+    position: absolute;
+    right: .4em;
+    top: .4em;
+    font-size: 2em;
+    transition: .5s;
+    color: #707070;
+}#close-event:hover{
+    color: rgb(0, 0, 0);
+}
+/* event */
+.container-event .judul-event{
+    font-size: 2em;
+    font-weight: 500;   
+    margin: .5em 0;
+}
+.waktu-event{
+    text-align: right;
+    font-size: 16px;
+    color: #6D6B6B;
+    margin: .5em 0;
+}
+.lokasi {
+    display: flex;
+}
+.lokasi i {
+    margin-right: .3em;
+}
+/* laporan nilai ================================================= */
+.event-laporan-nilai{
+    display: none;
+    position: fixed;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1em;
+    box-shadow: 0 0 0 100000px rgba(0, 0, 0, 0.336);
+    border-radius: 6px;
+    transition: scale .5s;
+}.show-nilai{
+    display: flex;
+    transform: scale(1) translate(-50%,-50%);
+}
+.event-laporan-nilai form{
+    display: flex;
+    justify-content: space-between;
+}
+.event-laporan-nilai form > div{
+    margin: 0 1em 0 0;
+}
+.event-laporan-nilai form > div label{
+    padding: 2px 0 2px 2px;
+    margin-left: 0;
+}
+.event-laporan-nilai form > div select{
+    border-radius: 6px;
+    padding: 2px;
+    margin-right: 0;
+}
+.event-laporan-nilai form button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color : #A8A8A8;
+    transition: .5s;
+}.event-laporan-nilai form button:hover{
+    background-color: #707070;
+}
+/* responsive */
+@media screen and (max-width: 553px){
+    .event-popup{
+        position: fixed;
+        z-index: 200;
+        width: 100%;
+        min-height: 50vh;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 6px;
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.288);
+        box-sizing: border-box;
+        padding: 2.4em 1em 1em;
+    }
+}

@@ -1,0 +1,564 @@
+/* mini framework */
+.d-flex{
+    display: flex;
+}
+.clearfix{
+    clear: both;
+}
+.container-landing{
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    background-image: url(../images/asset/edu.jpg);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.title-container{
+    align-self: flex-end;
+    margin-bottom: 10em;
+    margin-left: 5em;
+}
+.title-welcome{
+    text-align: right;
+    font-size: 3em;
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+}
+.title-smk{
+    font-size: 4em;
+    background: linear-gradient(to left , rgb(245, 232, 60) , rgb(255, 246, 117));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+/* jurusan ========================================*/
+.container-jurusan{
+    width: 100%;
+    padding: 2em 0;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+}
+.container-jurusan .jurusan{
+    display: flex;
+    width: 80%;
+    margin: 2em .5em;
+    padding: 0 2em;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+/* gambar-jurusan */
+.img-jurusan{
+    margin: 0 4em 0 2em;
+    position: relative;
+}.img-jurusan:hover::before{
+    left: 0em;
+    bottom: 0em;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+}
+.img-jurusan div{
+    width: 250px;
+    height: 250px;
+    display: block;
+    background-color: aqua;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 25px;
+}.img-jurusan::before{
+    content: '';
+    position: absolute;
+    width: 102%;
+    height: 102%;
+    box-sizing: border-box;
+    left: 1.1em;
+    bottom: -.1em;
+    border: .4em solid salmon;
+    z-index: 2;
+    border-radius: 25px;
+    transform: rotate(45deg);
+    opacity: .7;
+    transition: .5s;
+}
+.img-jurusan div .a-jurusan{
+    display: block;
+    position: absolute;
+    width: 353.55px;
+    height: 353.55px;
+    top: -55px;
+    left: -55px;
+    transform: rotate(-45deg);
+    /* background-color: blueviolet; */
+}
+/* img di kanan */
+.img-jurusan-kanan{
+    flex-direction: row-reverse;
+    text-align: right;
+}.img-jurusan-kanan .img-jurusan {
+    margin: 0 2em 0 4em;
+}.img-jurusan-kanan .img-jurusan::before{
+    left: -1.1em;
+    bottom: -.1em;
+}
+/* deskripsi jurusan */
+.jurusan .desc-jurusan{
+    margin: 0 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.desc-jurusan p{
+    line-height: 1.9;
+    word-spacing: 2px;
+}
+.desc-jurusan .nama-jurusan{
+    font-size: 2em;
+    font-weight: 350;
+    text-transform: uppercase;
+    margin:0 0 .5em 0;
+    padding: 0 .5em;
+}
+/* visi misi ==========================================*/
+.container-visimisi{
+    display: flex;
+    padding: 1em;
+    width: 100%;
+    min-height: 50vh;
+    box-sizing: border-box;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.container-visimisi > div{
+    padding: 1em .5em;
+    height: 50vh;
+    width: 50%;
+    box-sizing: border-box;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}.container-visimisi > div::before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 600;
+    font-size: 3em;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transition: .2s;
+}
+.container-visimisi div div:nth-child(1){
+    text-align: center;
+    width: 100%;
+    font-family: 'KoHo', sans-serif;
+    font-weight: 600;
+    font-size: 3em;
+}
+/* visi */
+.visi{
+    border-right: 1px solid black;
+    position: relative;
+    overflow: hidden;
+}.visi::before{
+    content: "\f104";
+    right: 0;
+    top: 50%;
+    padding: 0 0 0 10px;
+    transform: translateY(-50%);
+    transform: translateX(100%);
+    border-radius: 1em 0 0 1em;
+}.visi:hover::before{
+    transform: translateX(0);
+}
+.visi .isi-visi{
+    padding: .5em 4.5em 0 2em;
+    box-sizing: border-box;
+    word-spacing: .7em;
+    display: none;
+}
+/* misi */
+.misi{
+    border-left: 1px solid black;
+    position: relative;
+    overflow: hidden;
+}.misi::before{
+    content: "\f105";
+    left: 0;
+    top: 50%;
+    padding: 0 10px 0 0;
+    transform: translateY(-50%);
+    transform: translateX(-100%);
+    border-radius: 0 1em 1em 0;
+}.misi:hover::before{
+    transform: translateX(0);
+}
+.misi .isi-misi{
+    padding: .5em 2em 0 4.5em;
+    box-sizing: border-box;
+    line-height: 1.2;
+    display: none;
+}
+.container-visimisi .isi-misi ol{
+    list-style: decimal;
+    margin: .1em 0;
+}
+/* visi misi on off */
+.vm-on{
+    /* width: 80% !important; */
+    animation: vm-on 2s forwards;
+}
+.vm-on > div:nth-child(2){
+    display: block;
+}
+.vm-off{
+    /* width: 20% !important; */
+    animation: vm-off 2s forwards;
+}.vm-off::before{
+    display: none;
+}
+/* animasi vm */
+@keyframes vm-on{
+    from{
+        width: 20%;
+    }
+    to{
+        width: 80%;
+    }
+}
+@keyframes vm-off{
+    from{
+        width: 80%;
+    }
+    to{
+        width: 20%;
+    }
+}
+/* gallery ===========================*/
+.gallery{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+}
+#photos{
+    margin: auto;
+    padding: 2px;
+    background-color: #ffffff;
+    max-width: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    position: relative;
+}
+div#photos .photo {
+    position: relative;
+    flex-grow: 1;
+    min-width: calc( (100% / 3) - 4px );
+    background-size: cover;
+    background-position: center;
+    margin: 2px;
+    transition: .5s;
+  }
+  div#photos .photo:hover{
+      box-shadow: 3px 3px 10px rgba(2, 2, 2, 0.456);
+      z-index: 10;
+  }
+  div#photos .photo:after {
+    padding-top: /* 83.33333% */ 50vh;
+    display: block;
+    content: "";
+  }
+  div#photos .photo:before {
+    z-index: 2;
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    /* box-shadow: inset 0 0 0 2px #ffffff; */
+  }
+  /* gap img ke 1 */
+  div#photos .photo:nth-child(1) {
+    width: 100%;
+    height: 50vh;
+  }
+  div#photos.square .photo:after {
+    padding-top: 100%;
+  }
+  div#photos.portrait .photo:after {
+    padding-top: 120%;
+  }
+  /* footer */
+  .footer{
+      padding: 0 10%;
+      background-color: salmon;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5em 0;
+  }
+  .footer div{
+      flex-grow: 1;
+      text-align: center;
+  }
+  .footer div a{
+    text-decoration: none;
+    color: black;
+  }
+  /* footer kiri */
+  .footer .foo-kiri a{
+    line-height: 1;
+    display: block;
+    transition: .5s;
+  }
+  .footer .foo-kiri a:hover{
+      color: white;
+  }
+  .footer a i{
+    font-size: 1.2em;
+    transition: .5s;
+  }
+  .footer a i:hover{
+      color: white;
+  }
+  /* footer tengah */
+  /* footer kanan */
+  .social-media{
+    font-size: 1.7em;
+    display: flex;
+    justify-content: center;
+  }
+  .social-media li{
+      margin: 0 5px;
+  }
+  /* ============================================ */
+  /* responsive */
+  @media screen and (max-width:1214px){
+    /* welcome page paling atas*/
+    .container-landing{
+        background-image: url(../images/asset/edu.jpg);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center 20%;
+    }
+}
+  @media screen and (max-width:1024px){
+  /* jurusan */
+  .container-jurusan .jurusan{
+    flex-direction: column;
+    margin: 3em .5em;
+    align-items: center;
+  }
+  .img-jurusan,.img-jurusan-kanan .img-jurusan{
+    margin: 0 0 2.6em;
+  }
+  .img-jurusan div{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    transform: rotate(45deg);
+    border-radius: 25px;
+}.img-jurusan::before{
+    width: 96%;
+    height: 96%;
+    left: 1.1em;
+    bottom: -.1em;
+    border: .4em solid salmon;
+    border-radius: 25px;
+    transform: rotate(45deg);
+}
+.img-jurusan div .a-jurusan{
+    width: 353.55px;
+    height: 353.55px;
+    top: -55px;
+    left: -55px;
+}
+  .jurusan .desc-jurusan{
+    margin: 0 1em;
+}
+/* visi misi ==========================================*/
+.container-visimisi{
+    display: flex;
+    padding: 1em;
+    width: 100%;
+    min-height: 80vh;
+    box-sizing: border-box;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.container-visimisi > div{
+    padding: 1em .5em;
+    height: 80vh;
+    width: 50%;
+    box-sizing: border-box;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+}
+  @media screen and (max-width: 920px) {
+      /* jurusan */
+      .jurusan .desc-jurusan{
+        margin: 0 .5em;
+    }
+      /* gallery */
+    div#photos .photo {
+      min-width: calc( (100% / 2) - 4px);
+      margin: 2px;
+    }
+  }
+  @media screen and (max-width:852px){
+    /* welcome page paling atas*/
+    .container-landing{
+        background-image: url(../images/asset/edu.jpg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center 20%;
+    }
+      .title-container{
+        align-self: flex-end;
+        margin: 0 auto 10em;
+    }
+    .title-welcome{
+        text-align: center;
+        font-size: 2em;
+        font-weight: 200;
+    }
+    .title-smk{
+        font-size: 4em;
+        background: linear-gradient(to left , rgb(245, 232, 60) , rgb(255, 246, 117));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+  }
+  @media screen and (max-width: 768px){
+      /* visi misi ==========================================*/
+.container-visimisi{
+    display: flex;
+    padding: 1em;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.container-visimisi > div{
+    padding: 1em .5em;
+    height: 100vh;
+    width: 50%;
+    box-sizing: border-box;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+  }
+  @media screen and (max-width: 540px) {
+/* welcome page paling atas*/
+
+/* visi misi ==========================================*/
+.container-visimisi{
+    display: none;
+}
+      /* gallery */
+    div#photos .photo {
+      min-width: 100%;
+      margin: 2px;
+    }
+  }
+  @media screen and (max-width:425px){
+    .social-media{
+        font-size: 1em;
+      }
+      /* welcome page paling atas*/
+  .container-landing{
+    background-image: url(../images/asset/edu.jpg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center 20%;
+}
+  .title-container{
+    align-self: center;
+    margin: 14em auto 0em;
+}
+.title-welcome{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 200;
+}
+.title-smk{
+    font-size: 3.2em;
+    text-align: center;
+    background: linear-gradient(to left , rgb(245, 232, 60) , rgb(255, 246, 117));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+  }
+  @media screen and (max-width: 375px){
+    /* welcome page paling atas*/
+  .container-landing{
+      background-image: url(../images/asset/edu.jpg);
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center 20%;
+  }
+    .title-container{
+      align-self: center;
+      margin: 12em auto 0em;
+  }
+  .title-welcome{
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 200;
+  }
+  .title-smk{
+      font-size: 3em;
+      text-align: center;
+      background: linear-gradient(to left , rgb(245, 232, 60) , rgb(255, 246, 117));
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+  }
+}
+  @media screen and (max-width: 320px){
+      /* welcome page paling atas*/
+    .container-landing{
+        background-image: url(../images/asset/edu.jpg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center 20%;
+    }
+      .title-container{
+        align-self: center;
+        margin: 5em auto 0em;
+    }
+    .title-welcome{
+        text-align: center;
+        font-size: .8em;
+        font-weight: 200;
+    }
+    .title-smk{
+        font-size: 2em;
+        text-align: center;
+        background: linear-gradient(to left , rgb(245, 232, 60) , rgb(255, 246, 117));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+  }
