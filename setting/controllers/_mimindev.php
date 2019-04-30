@@ -67,9 +67,9 @@
                 $this->view('templates/admin/nav-atas');
                 // route ubah || edit
                 if ($nis === null) {
-                    $this->view('admin/siswa/tambah',$data);
+                    $this->view('admin/siswa/tambah');
                     if (isset($_POST['submit'])) {
-                        $this->model('admin_fn')->tambahSiswa($nis);
+                        $this->model('admin_fn')->tambahSiswa();
                     }
                 } else {
                     $data['siswa'] = $this->model('admin_fn')->getAny('nis',$nis,'data_siswa');
@@ -115,7 +115,7 @@
                 $this->view('templates/admin/footer-admin');
         }
         // tambah event
-        public function tambahEvent()
+        public function tambahEvent($id = null)
         {
                 $this->_cekAdmin();
                 $data['title'] = 'Siswa | Dishboard';
@@ -124,7 +124,21 @@
 
                 $this->view('templates/admin/nav-kiri-admin');
                 $this->view('templates/admin/nav-atas');
-                $this->view('admin/event/tambah');
+                // route ubah || edit
+                if ($id === null) {
+                    $this->view('admin/event/tambah');
+                    if (isset($_POST['submit'])) {
+                        $this->model('admin_fn')->tambahEvent();
+                    }
+                } else {
+                    $data['event'] = $this->model('admin_fn')->getAny('id_event',$id,'event');
+                    // $data['siswa']['tanggal_lahir'] = $this->model('admin_fn')->dateHtml($data['siswa']['tanggal_lahir']);
+                    $this->view('admin/event/tambah',$data);
+                    if (isset($_POST['submit'])) {
+                        // $this->model('admin_fn')->updateSiswa($nis);
+                    }
+                }
+                
 
                 $this->view('templates/admin/footer-admin');
         }

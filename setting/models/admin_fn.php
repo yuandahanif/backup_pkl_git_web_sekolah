@@ -10,6 +10,11 @@ class admin_fn{
     {
         return str_replace('-','/',date("m-d-Y",strtotime($d)));
     }
+    private function redirB()
+    {
+        echo '<script>window.location.replace(history.go(-1));</script>';
+        die();
+    }
 
 
     // pagination
@@ -20,14 +25,6 @@ class admin_fn{
         $this->db->execute();
         $jumlahberita = $this->db->rowCount();
         return ceil($jumlahberita / 25);
-    }
-    public function list_any($p,$table)
-    {
-        $awaldata = ($p * 25) - 25;
-        $this->db->prepare("SELECT * FROM :table ORDER BY nisn DESC LIMIT :page ,25");
-        $this->db->bind('table',$t);
-        $this->db->bind('page',$awaldata);
-        return $this->db->queryAll();
     }
 
     //TODO:list edit semua
@@ -53,6 +50,7 @@ class admin_fn{
         $this->db->bind('id',$i);
 
         $this->db->execute();
+        $this->redirB();
     }
 
 
@@ -81,13 +79,13 @@ class admin_fn{
         $this->db->execute();
 
         if($this->db->rowCount() > 0) {
-            header('Location: '.BASEURL.'_mimindev/dashboard');
+            $this->redirB();
         }else{
             echo 'err';
         }
     }
     // tambah siswa
-    public function tambahSiswa($nis)
+    public function tambahSiswa()
     {
         $this->db->prepare("INSERT INTO data_siswa VALUES ( :nis,:nisn,:nama,:kelas,:jurusan,:kelamin,:agama,:tanggal,:tempat,'' )");
         
@@ -104,7 +102,25 @@ class admin_fn{
         $this->db->execute();
 
         if($this->db->rowCount() > 0) {
-            header('Location: '.BASEURL.'_mimindev/dashboard');
+            $this->redirB();
+        }else{
+            echo 'err';
+        }
+    }
+    // tambah event
+    public function tambahEvent()
+    {
+        $this->db->prepare("INSERT INTO event VALUES ('',:nama,:tempat,:mulai,:selesai,:desk)");
+        $this->db->bind('nama',$_POST['nama']);
+        $this->db->bind('tempat',$_POST['tempat']);
+        $this->db->bind('mulai',$_POST['tanggal-mulai']);
+        $this->db->bind('selesai',$_POST['tanggal-selesai']);
+        $this->db->bind('desk',$_POST['deskripsi']);
+
+        $this->db->execute();
+
+        if($this->db->rowCount() > 0) {
+            // $this->redirB();
         }else{
             echo 'err';
         }
