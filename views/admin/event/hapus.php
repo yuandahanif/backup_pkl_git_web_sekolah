@@ -18,7 +18,7 @@
                         <td><?= $e['tempat_event'] ?></td>
                         <td><?= $e['tanggal_mulai_event'] ?></td>
                         <td><?= $e['tanggal_selesai_event'] ?></td>
-                        <td><input type="checkbox" name="hapus" value="id"> | <a href="" class="hapus"><i class="far fa-trash-alt"></i> hapus</a></td>
+                        <td><input type="checkbox" name="hapus" value="id"> | <a href="<?= BASEURL ?>_mimindev/hapus/event/id_event/<?= $e['id_event'] ?>" class="hapus"><i class="far fa-trash-alt"></i> hapus</a></td>
                     </tr>
                     <?php endforeach; ?>
                 </table>
